@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns0="http://example.org/">
+
+  <rdfs:Property rdf:about="http://example.org/Tensao">
+    <rdfs:label>Tensao</rdfs:label>
+    <rdfs:Range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdfs:Property>
+
+  <rdfs:Property rdf:about="http://example.org/Corrente">
+    <rdfs:label>Corrente</rdfs:label>
+    <rdfs:Range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdfs:Property>
+
+  <rdfs:Property rdf:about="http://example.org/Resistencia">
+    <rdfs:label>Resistencia</rdfs:label>
+    <rdfs:Range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdfs:Property>
+
+  <rdfs:Property rdf:about="http://example.org/Potencia">
+    <rdfs:label>Potencia</rdfs:label>
+    <rdfs:Range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdfs:Property>
+
+  <rdf:Description rdf:about="http://example.org/Fonte0">
+    <rdf:type rdf:resource="http://dbpedia.org/resource/Regulated_power_supply"/>
+    <ns0:Tensao>9</ns0:Tensao>
+    <ns0:Corrente>1</ns0:Corrente>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/Resistor1">
+    <rdf:type rdf:resource="http://dbpedia.org/resource/Resistor"/>
+    <ns0:Resistencia>330</ns0:Resistencia>
+    <ns0:Potencia>0,25</ns0:Potencia>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/Led2">
+    <rdf:type rdf:resource="http://dbpedia.org/resource/Light-emitting_diode"/>
+    <ns0:Tensao>2</ns0:Tensao>
+    <ns0:Corrente>0,015</ns0:Corrente>
+  </rdf:Description>
+
+  <rdfs:Property rdf:about="http://example.org/pin3">
+    <rdfs:label>Pin3</rdfs:label>
+  </rdfs:Property>
+
+  <rdfs:Property rdf:about="http://example.org/pin2">
+    <rdfs:label>Pin2</rdfs:label>
+  </rdfs:Property>
+
+  <rdfs:Property rdf:about="http://example.org/pin1">
+    <rdfs:label>Pin1</rdfs:label>
+  </rdfs:Property>
+
+  <rdfs:Class rdf:about="http://example.org/Node_of_circuit">
+  </rdfs:Class>
+
+  <ns0:Node_of_circuit rdf:about="http://example.org/Node1">
+    <ns0:pin1 rdf:resource="http://example.org/Fonte0"/>
+    <ns0:pin1>anodo</ns0:pin1>
+    <ns0:pin2 rdf:resource="http://example.org/Led2"/>
+    <ns0:pin2>anodo</ns0:pin2>
+  </ns0:Node_of_circuit>
+
+  <ns0:Node_of_circuit rdf:about="http://example.org/Node2">
+    <ns0:pin1 rdf:resource="http://example.org/Resistor1"/>
+    <ns0:pin1>pino1</ns0:pin1>
+    <ns0:pin2 rdf:resource="http://example.org/Led2"/>
+    <ns0:pin2>catodo</ns0:pin2>
+  </ns0:Node_of_circuit>
+
+  <ns0:Node_of_circuit rdf:about="http://example.org/Node3">
+    <ns0:pin1 rdf:resource="http://example.org/Fonte0"/>
+    <ns0:pin1>catodo</ns0:pin1>
+    <ns0:pin2 rdf:resource="http://example.org/Resistor1"/>
+    <ns0:pin2>pino2</ns0:pin2>
+  </ns0:Node_of_circuit>
+
+</rdf:RDF>
