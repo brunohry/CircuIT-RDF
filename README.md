@@ -11,7 +11,7 @@ siga as instruções digitando no teclado numerico
 python3 translatos.py < entrada.txt
 
 
-# Essa é uma Prova de Conceito feito para um trabalho na universidade.
-# Podem existir bugs e seu uso é atuamente limitado a Fonte, Resisto e Led.
+## Essa é uma Prova de Conceito feito para um trabalho na universidade.
+## Podem existir bugs e seu uso é atuamente limitado a Fonte, Resistor e Led.
 
 
